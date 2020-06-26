@@ -1,0 +1,40 @@
+------------------------------------------------------
+This will be the standard template for MEAN stack app
+------------------------------------------------------
+
+check angular cli version ---- ng v
+
+check node and npm versions ---- node -v && npm -v
+
+git init
+
+create folders for backend and frontend
+
+create angular project in frontend folder ---- ng new AngularProjectName (select yes on routing)
+
+add angular material in frontend folder ---- ng add @angular/material (with default options)
+
+create a backend folder ---- for all backend & database related work
+
+initialise node ---- npm init -y
+
+create app.js, .gitignore files & routes, models, controller folders in backend folder
+
+Setting up babel ---- npm install --save-dev babel-cli babel-preset-env babel-watch
+
+include following in .babelrc file
+-----------------------------------
+{
+  "presets": ["env"]
+}
+
+include following in package.json file
+-----------------------------------
+"scripts": {
+    "dev": "babel-watch server.js"
+  }
+
+install express, mongoose, cors, nodemon, body-parser ---- npm i --save express mongoose cors (optional) body-parser
+
+install nodemon as a dev dependency ---- npm i --save-dev nodemon
+
