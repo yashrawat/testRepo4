@@ -38,3 +38,12 @@ install express, mongoose, cors, nodemon, body-parser ---- npm i --save express 
 
 install nodemon as a dev dependency ---- npm i --save-dev nodemon
 
+stage unstaged files
+
+create first commit
+
+connect local repo with github
+
+push code to github
+
+setup nodemon in package.json with npm start command ---- "start": "nodemon app.js" 
