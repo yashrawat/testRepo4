@@ -1,0 +1,29 @@
+<div class="div1">
+  <br>
+  <mat-card>
+    <section class="mat-card-subtitle">
+      <h3>{{ mode | titlecase }} Expense</h3>
+    </section>
+    <mat-divider></mat-divider>
+    <br>
+    <form [formGroup]="createForm" (submit)="onSaveExpense()" class="create-form">
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Expense Name" type="text" formControlName="expenseName">
+        <mat-error *ngIf="createForm.get('expenseName').invalid">Enter expense name</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Expense Amount" type="number" formControlName="expenseAmount">
+        <mat-error *ngIf="createForm.get('expenseAmount').invalid">Enter expense amount</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Expense Date" type="date" formControlName="expenseDate">
+        <mat-error *ngIf="createForm.get('expenseDate').invalid">Enter expense date</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="accent" routerLink="/expenses-list">Back</button>&nbsp;
+      <button type="submit" [disabled]="createForm.pristine || createForm.invalid" mat-raised-button color="primary">Save</button>
+    </form>
+  </mat-card>
+</div>

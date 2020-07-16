@@ -7,9 +7,6 @@ exports.createExpense = (req, res, next) => {
         expenseDate: req.body.expenseDate
     });
 
-    //debugging
-    console.log(req.body);
-
     expense.save()
         .then(createdExpense => {
             res.status(201).json({

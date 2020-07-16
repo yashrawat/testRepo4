@@ -1,0 +1,20 @@
+.field-full-width {
+  width: 100%;
+}
+
+.create-form {
+  min-width: 150px;
+  width: 100%;
+}
+
+mat-card {
+  width: max-content;
+  text-align: center;
+}
+
+.div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}

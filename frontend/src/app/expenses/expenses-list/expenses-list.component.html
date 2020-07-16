@@ -1,0 +1,26 @@
+<div class="div-1">
+  <mat-list *ngIf="expenses.length > 0">
+
+    <mat-card *ngFor="let expense of expenses" class="mat-card-1">
+
+      <div class="div-2">
+
+        <mat-list-item>
+
+          <h3 matLine>{{ expense.expenseName | titlecase }} </h3>
+          <p matLine>{{ expense.expenseAmount }} INR</p>
+          <p matLine class="demo-2">Created On: {{ expense.expenseDate | date}} </p>
+
+          <a mat-raised-button color="primary" [routerLink]="['/expense-edit', expense.id]">Edit</a>
+          <button mat-raised-button color="warn" (click)="onDelete(expense.id)">Delete</button>
+
+        </mat-list-item>
+
+      </div>
+
+      <mat-divider></mat-divider>
+    </mat-card>
+
+  </mat-list>
+</div>
+<p *ngIf="expenses.length <= 0" class="info-text mat-body-1">No expense added yet</p>
