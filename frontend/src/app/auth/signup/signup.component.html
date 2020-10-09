@@ -1,0 +1,33 @@
+<mat-card>
+
+  <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input type="text" formControlName="name" matInput placeholder="Name">
+      <mat-error *ngIf="signupForm.get('name').invalid">Please enter your name, minimum 3 characters are required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" formControlName="email" matInput placeholder="Email">
+      <mat-error *ngIf="signupForm.get('email').invalid">Please enter a valid email address</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input type="password" formControlName="password" matInput placeholder="Password">
+      <mat-error *ngIf="signupForm.get('password').invalid">Please enter a valid password, minimum 8 characters are required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Confirm Password</mat-label>
+      <input type="password" formControlName="confirmPassword" matInput placeholder="Password">
+      <mat-error *ngIf="signupForm.get('confirmPassword').invalid">Passwords do not match</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid">Signup</button>
+
+  </form>
+
+</mat-card>

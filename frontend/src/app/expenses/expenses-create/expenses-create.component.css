@@ -18,3 +18,7 @@ mat-card {
   align-items: center;
   padding-top: 10px;
 }
+
+mat-form-field {
+  padding-bottom: 1rem;
+}
